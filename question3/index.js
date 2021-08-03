@@ -72,7 +72,7 @@ function convertRawTableDataToFundDataList(tableRows) {
 function run() {
   const args = parseArgs();
   if (!args.length) {
-    console.error("Please specifiy a fund code");
+    console.error("Please specify a fund code");
     return;
   }
 
