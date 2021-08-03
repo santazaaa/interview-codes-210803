@@ -1,0 +1,23 @@
+<div *ngIf="!loading">
+  <!-- search box -->
+  <div>
+    Search: <input [(ngModel)]="filter" (ngModelChange)="updateFilter()" >
+  </div>
+  <!-- table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredList">
+        <td>{{item}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- no data message -->
+  <div *ngIf="!filteredList.length">Not found</div>
+</div>
+<!-- loading message -->
+<div *ngIf="loading">Fetching data...</div>
